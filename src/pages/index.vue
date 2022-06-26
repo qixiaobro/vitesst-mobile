@@ -1,10 +1,19 @@
 <script setup lang="ts">
+import { Toast } from 'vant'
+
 const name = $ref('')
 
 const router = useRouter()
 const go = () => {
   if (name)
     router.push(`/hi/${encodeURIComponent(name)}`)
+}
+
+const handleClick = () => {
+  Toast.loading({
+    message: '加载中...',
+    forbidClick: true,
+  })
 }
 </script>
 
@@ -36,6 +45,21 @@ const go = () => {
       outline="none active:none"
       @keydown.enter="go"
     >
+    <van-button type="primary" @click="handleClick">
+      主要按钮
+    </van-button>
+    <van-button type="success">
+      成功按钮
+    </van-button>
+    <van-button type="default">
+      默认按钮
+    </van-button>
+    <van-button type="warning">
+      警告按钮
+    </van-button>
+    <van-button type="danger">
+      危险按钮
+    </van-button>
 
     <div>
       <button

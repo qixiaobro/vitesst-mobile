@@ -7,6 +7,7 @@ import Pages from 'vite-plugin-pages'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
+import { VantResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
   resolve: {
@@ -35,11 +36,13 @@ export default defineConfig({
         './src/composables',
       ],
       vueTemplate: true,
+      resolvers: [VantResolver()],
     }),
 
     // https://github.com/antfu/vite-plugin-components
     Components({
       dts: true,
+      resolvers: [VantResolver()],
     }),
 
     // https://github.com/antfu/unocss

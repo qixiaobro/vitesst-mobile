@@ -15,6 +15,7 @@ specifiers:
   unocss: ^0.39.3
   unplugin-auto-import: ^0.9.1
   unplugin-vue-components: ^0.20.0
+  vant: ^3.5.1
   vite: ^2.9.12
   vite-plugin-pages: ^0.24.2
   vitest: ^0.16.0
@@ -24,6 +25,7 @@ specifiers:
 
 dependencies:
   '@vueuse/core': 8.7.5_vue@3.2.37
+  vant: 3.5.1_vue@3.2.37
   vue: 3.2.37
   vue-router: 4.0.16_vue@3.2.37
 
@@ -273,6 +275,10 @@ packages:
   /@polka/url/1.0.0-next.21:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
+
+  /@popperjs/core/2.11.5:
+    resolution: {integrity: sha512-9X2obfABZuDVLCgPK9aX0a/x4jaOEweTTWE2+9sr0Qqqevj2Uv5XorvusThmc9XGYpS9yI+fhh8RTafBtGposw==}
+    dev: false
 
   /@rollup/pluginutils/4.2.1:
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
@@ -595,6 +601,20 @@ packages:
       magic-string: 0.26.2
       vite: 2.9.12
     dev: true
+
+  /@vant/icons/1.8.0:
+    resolution: {integrity: sha512-sKfEUo2/CkQFuERxvkuF6mGQZDKu3IQdj5rV9Fm0weJXtchDSSQ+zt8qPCNUEhh9Y8shy5PzxbvAfOOkCwlCXg==}
+    dev: false
+
+  /@vant/popperjs/1.2.1:
+    resolution: {integrity: sha512-qzQlrPE4aOsBzfrktDVwzQy/QICCTKifmjrruhY58+Q2fobUYp/T9QINluIafzsD3VJwgP8+HFVLBsyDmy3VZQ==}
+    dependencies:
+      '@popperjs/core': 2.11.5
+    dev: false
+
+  /@vant/use/1.4.1:
+    resolution: {integrity: sha512-YonNN0SuJLEJuqdoMcVAJm2JUZWkHNrW81QzeF6FLyG5HFUGlmTM5Sby7gdS3Z/8UDMlkWRQpJxBWbmVzmUWxQ==}
+    dev: false
 
   /@vitejs/plugin-vue/2.3.3_vite@2.9.12+vue@3.2.37:
     resolution: {integrity: sha512-SmQLDyhz+6lGJhPELsBdzXGc+AcaT8stgkbiTFGpXPe8Tl1tJaBw1A6pxDqDuRsVkD8uscrkx3hA7QDOoKYtyw==}
@@ -3768,6 +3788,17 @@ packages:
       spdx-correct: 3.1.1
       spdx-expression-parse: 3.0.1
     dev: true
+
+  /vant/3.5.1_vue@3.2.37:
+    resolution: {integrity: sha512-SoTrAnesooXnAAR9IDn/zfna24tgShkC8/lAJJQsOa0ynmR61AnV1wOwCsUNf2Q1CobQIGi3AHTUan7cPzupEA==}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      '@vant/icons': 1.8.0
+      '@vant/popperjs': 1.2.1
+      '@vant/use': 1.4.1
+      vue: 3.2.37
+    dev: false
 
   /vite-plugin-pages/0.24.2_vite@2.9.12:
     resolution: {integrity: sha512-AmrHa6gi6n0mZReKzQTQ1uuf17fd1ziRDjNvSh0NTWNnDgA2si+hC8p63s3KyEmJS5lOE/rEeO4NBaRkY3sY3g==}
