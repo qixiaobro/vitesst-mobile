@@ -52,7 +52,7 @@ export default defineComponent({
   .van-swipe img {
     display: block;
     width: 100%;
-    height: px2rem(480);
+    height: 480px;
     padding: 30px 60px;
     pointer-events: none;
     background-color: #fff;
