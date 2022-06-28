@@ -1,22 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <title>Vitesse Lite</title>
-  <meta name="description" content="Opinionated Vite Starter Template">
-</head>
-<body class="font-sans dark:text-white dark:bg-hex-121212">
-  <div id="app"></div>
-  <script>
-    (function() {
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-      const setting = localStorage.getItem('color-schema') || 'auto'
-      if (setting === 'dark' || (prefersDark && setting !== 'light'))
-        document.documentElement.classList.toggle('dark', true)
-    })()
-  </script>
-  <script type="module" src="/src/main.ts"></script>
-</body>
-</html>
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" data-content-max content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <title>Vitesse Lite</title>
+    <meta name="description" content="Opinionated Vite Starter Template">
+    <script src="./src/composables/flex.ts"></script>
+
+    <style>
+      html body[data-content-max] {
+        max-width: 540px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    </style>
+  </head>
+
+  <body data-content-max>
+    <div id="app"></div>
+    <script>
+      (function () {
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  const setting = localStorage.getItem('color-schema') || 'auto'
+  if (setting === 'dark' || (prefersDark && setting !== 'light'))
+          document.documentElement.classList.toggle('dark', true)
+})()
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+
+  </html>

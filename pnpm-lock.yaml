@@ -11,6 +11,8 @@ specifiers:
   eslint: ^8.18.0
   jsdom: ^20.0.0
   pnpm: ^7.3.0
+  postcss: ^8.4.14
+  postcss-pxtorem: ^6.0.0
   typescript: ^4.7.4
   unocss: ^0.39.3
   unplugin-auto-import: ^0.9.1
@@ -39,6 +41,8 @@ devDependencies:
   eslint: 8.18.0
   jsdom: 20.0.0
   pnpm: 7.3.0
+  postcss: 8.4.14
+  postcss-pxtorem: 6.0.0_postcss@8.4.14
   typescript: 4.7.4
   unocss: 0.39.3_vite@2.9.12
   unplugin-auto-import: 0.9.1_4jnm4urp6nwbe5o76bpn6kimyu
@@ -682,7 +686,7 @@ packages:
       '@vue/shared': 3.2.37
       estree-walker: 2.0.2
       magic-string: 0.25.7
-      postcss: 8.4.13
+      postcss: 8.4.14
       source-map: 0.6.1
 
   /@vue/compiler-ssr/3.2.37:
@@ -2829,8 +2833,8 @@ packages:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
     dev: true
 
-  /nanoid/3.3.3:
-    resolution: {integrity: sha512-p1sjXuopFs0xg+fPASzQ28agW1oHD7xDsd9Xkf3T15H3c/cifrFHVwrh74PdoklAPi+i7MdRsE47vm2r6JoB+w==}
+  /nanoid/3.3.4:
+    resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
@@ -3148,6 +3152,14 @@ packages:
     hasBin: true
     dev: true
 
+  /postcss-pxtorem/6.0.0_postcss@8.4.14:
+    resolution: {integrity: sha512-ZRXrD7MLLjLk2RNGV6UA4f5Y7gy+a/j1EqjAfp9NdcNYVjUMvg5HTYduTjSkKBkRkfqbg/iKrjMO70V4g1LZeg==}
+    peerDependencies:
+      postcss: ^8.0.0
+    dependencies:
+      postcss: 8.4.14
+    dev: true
+
   /postcss-selector-parser/6.0.10:
     resolution: {integrity: sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==}
     engines: {node: '>=4'}
@@ -3156,11 +3168,11 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
-  /postcss/8.4.13:
-    resolution: {integrity: sha512-jtL6eTBrza5MPzy8oJLFuUscHDXTV5KcLlqAWHl5q5WYRfnNRGSmOZmOZ1T6Gy7A99mOZfqungmZMpMmCVJ8ZA==}
+  /postcss/8.4.14:
+    resolution: {integrity: sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
-      nanoid: 3.3.3
+      nanoid: 3.3.4
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
@@ -3840,7 +3852,7 @@ packages:
         optional: true
     dependencies:
       esbuild: 0.14.29
-      postcss: 8.4.13
+      postcss: 8.4.14
       resolve: 1.22.0
       rollup: 2.61.0
     optionalDependencies:
