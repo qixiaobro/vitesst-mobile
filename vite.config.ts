@@ -6,6 +6,7 @@ import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+import viteCompression from 'vite-plugin-compression'
 import Unocss from 'unocss/vite'
 import { VantResolver } from 'unplugin-vue-components/resolvers'
 
@@ -49,6 +50,16 @@ export default defineConfig({
     // https://github.com/antfu/unocss
     // see unocss.config.ts for config
     Unocss(),
+
+    // https://github.com/vbenjs/vite-plugin-compression/blob/main/README.zh_CN.md
+    // gzip
+    viteCompression({
+      verbose: true,
+      disable: false,
+      threshold: 10240,
+      algorithm: 'gzip',
+      ext: '.gz',
+    }),
   ],
 
   // https://github.com/vitest-dev/vitest
