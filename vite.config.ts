@@ -34,6 +34,7 @@ export default defineConfig({
       dts: true,
       dirs: [
         './src/composables',
+        './src/api',
       ],
       vueTemplate: true,
       resolvers: [VantResolver()],
@@ -53,5 +54,46 @@ export default defineConfig({
   // https://github.com/vitest-dev/vitest
   test: {
     environment: 'jsdom',
+  },
+
+  // 本地服务
+  server: {
+    host: true,
+    port: 8080,
+    open: true,
+    cors: true,
+    // 代理
+    proxy: {
+      '/api': {
+        // target: 'http://127.0.0.1:4523/mock/1145221',
+        target: 'https://api.apiopen.top/',
+        changeOrigin: true,
+        // rewrite: path => path.replace('/api/', '/'),
+      },
+    },
+  },
+
+  // 构建
+  build: {
+    brotliSize: false,
+    // 消除打包大小超过500kb警告
+    chunkSizeWarningLimit: 2000,
+    // 在生产环境移除console.log
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+    assetsDir: 'static/assets',
+    // 静态资源打包到dist下的不同目录
+    rollupOptions: {
+      output: {
+        chunkFileNames: 'static/js/[name]-[hash].js',
+        entryFileNames: 'static/js/[name]-[hash].js',
+        assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
+      },
+    },
   },
 })

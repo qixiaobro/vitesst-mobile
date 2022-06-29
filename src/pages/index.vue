@@ -1,19 +1,40 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
+import { Toast } from 'vant'
 import { navList } from './navList'
+const images = [
+  'https://img.yzcdn.cn/vant/apple-1.jpg',
+  'https://img.yzcdn.cn/vant/apple-2.jpg',
+]
 
-export default defineComponent({
-  name: 'Home',
-  setup() {
-    const images = [
-      'https://img.yzcdn.cn/vant/apple-1.jpg',
-      'https://img.yzcdn.cn/vant/apple-2.jpg',
-    ]
-    return {
-      images,
-      navList,
-    }
-  },
+interface Good {
+  id: number
+  title: string
+  type: string
+  url: string
+}
+const goodList = ref<Good[]>([])
+const asyncGetImgList = async () => {
+  try {
+    const toast = Toast.loading({
+      message: '加载中...',
+      forbidClick: true,
+      loadingType: 'spinner',
+    })
+
+    const { result } = await getImgList({
+      page: 0,
+      size: 5,
+    })
+    toast.clear()
+    goodList.value = result.list
+  }
+  catch (err: any) {
+
+  }
+}
+
+onMounted(() => {
+  asyncGetImgList()
 })
 </script>
 
@@ -36,15 +57,15 @@ export default defineComponent({
     </van-swipe-item>
   </van-swipe>
   <van-card
-    v-for="item in 20"
-    :key="item"
-    :num="item"
+    v-for="item in goodList"
+    :key="item.id"
+    :num="item.id"
     tag="标签"
-    :price="item.toFixed(2)"
-    desc="描述信息"
-    title="商品标题"
-    thumb="https://img.yzcdn.cn/vant/ipad.jpeg"
-    :origin-price="(item * 10).toFixed(2)"
+    :price="item.id.toFixed(2)"
+    :desc="item.type"
+    :title="item.title"
+    :thumb="item.url"
+    :origin-price="(item.id * 10).toFixed(2)"
   />
 </template>
 
