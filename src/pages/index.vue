@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { Toast } from 'vant'
 import { navList } from './navList'
 const images = [
   'https://img.yzcdn.cn/vant/apple-1.jpg',

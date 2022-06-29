@@ -1,6 +1,5 @@
 import type { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import axios from 'axios'
-import { Toast } from 'vant'
 
 declare interface codeMessageMapTypes {
   400: string

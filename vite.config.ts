@@ -31,6 +31,11 @@ export default defineConfig({
         'vue/macros',
         'vue-router',
         '@vueuse/core',
+        {
+          vant: [
+            'Toast',
+          ],
+        },
       ],
       dts: true,
       dirs: [
