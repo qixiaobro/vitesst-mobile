@@ -33,7 +33,6 @@ const axiosInstance: AxiosInstance = axios.create({
   // 请求头
   headers: {
     'Content-Type': 'application/json',
-    'Authori-zation': `Bearer ${sessionStorage.getItem('token')}`,
   },
 })
 
@@ -41,9 +40,9 @@ const axiosInstance: AxiosInstance = axios.create({
 axiosInstance.interceptors.request.use(
   (config: AxiosRequestConfig) => {
     // TODO 在这里可以加上想要在请求发送前处理的逻辑
-    // config.headers = {
-    //   'Authori-zation': `Bearer ${sessionStorage.getItem('token')}`,
-    // }
+    config.headers = {
+      'Authori-zation': `Bearer ${sessionStorage.getItem('token')}`,
+    }
     return config
   },
   (error: AxiosError) => {
