@@ -7,6 +7,11 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    VanCard: typeof import('vant/es')['Card']
+    VanGrid: typeof import('vant/es')['Grid']
+    VanGridItem: typeof import('vant/es')['GridItem']
+    VanSwipe: typeof import('vant/es')['Swipe']
+    VanSwipeItem: typeof import('vant/es')['SwipeItem']
   }
 }
 
