@@ -93,8 +93,7 @@ export default defineConfig({
     // 代理
     proxy: {
       '/api': {
-        // target: 'http://127.0.0.1:4523/mock/1145221',
-        target: 'https://api.apiopen.top/',
+        target: 'https://www.fastmock.site/mock/5c21e309d9f9e59a2babf4c6cab345c1',
         changeOrigin: true,
         // rewrite: path => path.replace('/api/', '/'),
       },

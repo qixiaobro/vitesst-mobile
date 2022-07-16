@@ -5,13 +5,15 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Footer: typeof import('./src/components/Footer.vue')['default']
+    'ILogos:vitejs': typeof import('~icons/logos/vitejs')['default']
+    'IVscodeIcons:fileTypeTypescriptOfficial': typeof import('~icons/vscode-icons/file-type-typescript-official')['default']
+    'IVscodeIcons:fileTypeVue': typeof import('~icons/vscode-icons/file-type-vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    VanCard: typeof import('vant/es')['Card']
-    VanGrid: typeof import('vant/es')['Grid']
-    VanGridItem: typeof import('vant/es')['GridItem']
-    VanSwipe: typeof import('vant/es')['Swipe']
-    VanSwipeItem: typeof import('vant/es')['SwipeItem']
+    VanButton: typeof import('vant/es')['Button']
+    VanField: typeof import('vant/es')['Field']
+    VanNavBar: typeof import('vant/es')['NavBar']
   }
 }
 
