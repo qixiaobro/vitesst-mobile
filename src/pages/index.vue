@@ -9,7 +9,7 @@ const go = () => {
 
 <template>
   <div mx-auto px-30px text-34px>
-    <img src="favicon.svg" text-black mt-5>
+    <img src="/favicon.svg" text-black mt-5>
     <a href="https://github.com/qixiaobro/vitesst-mobile" target="_blank" block mt-2 text-black dark:text-white>Vitesst mobile</a>
     <div mt-2 leading-2>
       <i-logos:vitejs /> 2.x + <i-vscode-icons:file-type-vue /> 3.x + <i-vscode-icons:file-type-typescript-official /> 4.x+ <img src="https://fastly.jsdelivr.net/npm/@vant/assets/logo.png" class="vant"> 3.x <br>Mobile Simple Starter Template
