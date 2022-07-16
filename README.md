@@ -1,6 +1,7 @@
 <br>
 
-<h2 align='center'>Vitesst （Vue 3.x + Vite 2.x + TS + Vant 3.x Mobile Simple Starter Template）</h2>
+<h2 align='center'>Vitesst mobile</h2>
+<h2 align='center'>（Vue 3.x + Vite 2.x + TS + Vant 3.x Mobile Simple Starter Template）</h2>
 
 <br>
 
