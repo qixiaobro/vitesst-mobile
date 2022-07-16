@@ -32,7 +32,7 @@ onMounted(() => {
       Hi, {{ props.name }}
     </p>
     <p text-34px op50>
-      <em>动态路由 & layout!</em>
+      <em>动态路由 & layout & fetch</em>
     </p>
 
     <div>
